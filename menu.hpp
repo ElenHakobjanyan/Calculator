@@ -59,7 +59,6 @@ int line_mode(int& line, int& mode)
 	{
 		cbreak();
 		int key = keypress();
-		normal();
 		
 		switch (key)
 		{
@@ -87,6 +86,7 @@ int line_mode(int& line, int& mode)
 				break;
 		}
 	}
+	normal();
 	return 0;
 }
 //up 119

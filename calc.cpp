@@ -174,6 +174,8 @@ double calculate(std::string str)
 	std::stack<double> stk_num;
 	std::stack<char> stk_op;
 	
+	if (str == "") return 0;
+	
 	unsigned int i = 0;
 	while (i < str.size())//While there are still tokens to be read in,
 	{

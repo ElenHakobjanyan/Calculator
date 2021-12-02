@@ -79,6 +79,7 @@ int line_mode(int& line, int& mode)
 				print_menu(line, mode);
 				break;
 			case 10://enter
+				normal();
 				return(line);
 			case 27://esc
 				return 2;

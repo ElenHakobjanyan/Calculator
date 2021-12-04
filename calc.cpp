@@ -17,17 +17,17 @@ const int SIZE = 15;
 std::tuple <std::string, char, int> precedence[SIZE] = {
     {   ".", '.', 5},
     {   "!", '!', 5},
-	{"sqrt", 'q', 4},
+    {"sqrt", 'q', 4},
     { "sin", 's', 4},
-	{ "cos", 'c', 4},
+    { "cos", 'c', 4},
     {  "tg", 't', 4},
-	{  "ln", 'l', 4},
+    {  "ln", 'l', 4},
     {  "lg", 'L', 4},
-	{   "%", '%', 4},
+    {   "%", '%', 4},
     { "abs", 'a', 4},
-	{   "^", '^', 3},
+    {   "^", '^', 3},
     {   "*", '*', 2},
-	{   "/", '/', 2},
+    {   "/", '/', 2},
     {   "+", '+', 1},
     {   "-", '-', 1}
 };
@@ -150,7 +150,7 @@ void operation(char op_2, std::stack<double>& stk_num)
 	{
 		if (op_2 == std::get<1>(precedence[i]))
 		{
-			if (i >= 1 && i <= 10)//one operand operation
+			if (i >= 1 && i <= 9)//one operand operation
 			{
 				double num = stk_num.top();
 				stk_num.pop();
@@ -200,6 +200,8 @@ double calculate(std::string str)
 				break;
 			case 'e'://Number e
 				stk_num.push(e);
+				break;
+			case 'x'://A variable. Gets it's value and push onto the value stack.
 				break;
 			case '('://A left parenthesis: push it onto the operator stack.
 				stk_op.push(str[i]);
@@ -308,42 +310,31 @@ int open_calc(std::string& expr, int mode = 0)
 {
 	while (true)
 	{
-	
-	system("clear");
-	
-	switch (mode)
-	{
-		case 1:
-			//break;
-		case 2:
-			//break;
-		default:
-			print_calc();
-			gotoxy(18, 2);
-			getline(std::cin, expr);
-			gotoxy(18, 4);
-			std::cout  << calculate(expr) << std::endl;
-			break;
-	}
+		system("clear");
+		
+		switch (mode)
+		{
+			case 1:
+				//break;
+			case 2:
+				//break;
+			default:
+				print_calc();
+				gotoxy(18, 2);
+				getline(std::cin, expr);
+				gotoxy(18, 4);
+				std::cout  << calculate(expr) << std::endl;
+				break;
+		}
 
-	cbreak();
-	int k = -1;
-	while (k == -1)
-	{
-		k = keypress();
-	}
-	normal();
-	switch(k)
-	{
-		case 27://esc
-			system("clear");
-			return 27;
-		default:
-			if (open_calc(expr) == 27) break;
-			//open_calc(expr);
-			//break;
+		cbreak();
+		int k = -1;
+		while (k == -1)
+		{
+			k = keypress();
+		}
+		normal();
+		if (k == 27) return 0;
 	}
 	
-	}
-	return 0;
 }

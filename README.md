@@ -1,15 +1,16 @@
 # Calculator
 Course Project 2021
 
-
 # About Project
 
 # How to control
 
-<w> -- 
-<a> --
-<s> --
-<d> --
+w - up
+a - left
+s - down
+d - right
+enter - open highlighted option
+esc - exit
 
 # Resources
 

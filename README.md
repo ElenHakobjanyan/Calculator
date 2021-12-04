@@ -1,9 +1,9 @@
 # Calculator
 Course Project 2021
 
-## About Project
+### About Project
 
-## How to control
+### How to control
 
 w - up
 
@@ -18,7 +18,7 @@ enter - open highlighted option
 esc - exit
 
 
-## Resources
+### Resources
 
 [Shunting-yard algorithm](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
 

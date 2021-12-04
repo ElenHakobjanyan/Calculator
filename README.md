@@ -14,5 +14,5 @@ esc - exit
 
 # Resources
 
-Shunting-yard algorithm: https://en.wikipedia.org/wiki/Shunting-yard_algorithm
+Shunting-yard algorithm: https://en.wikipedia.org/wiki/Shunting-yard_algorithm \n
 History: https://en.wikipedia.org/wiki/Calculator#History

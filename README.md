@@ -22,4 +22,4 @@ esc - exit
 
 [Shunting-yard algorithm](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
 
-[History](https://en.wikipedia.org/wiki/Calculator#History)
+[History](https://en.wikipedia.org/wiki/Calculator#Development_of_electronic_calculators)
